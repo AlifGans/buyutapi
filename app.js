@@ -1,7 +1,7 @@
 const express = require('express');
 const getInfo = require('./ytdl.js')
 const app = express();
-const port = 3030
+const port = process.env.PORT || 3030;
 
 app.set('json spaces', 2)
 app.get('/ytmp4/',(req,res) => {
