@@ -6,6 +6,11 @@ const app = express();
 const port = process.env.PORT || 3030;
 
 app.set('json spaces', 2)
+
+app.get('/',(req,res) => {
+    res.send(`1.YTMP4 https://buyutapi.herokuapp.com/ytmp4?url=ytlink<br>2.Textpro Fancy Gloow https://buyutapi.herokuapp.com/textpro/fancyglow?text=buyutapi`)
+})
+
 app.get('/ytmp4/',(req,res) => {
     const url = req.query.url;
     res.header("Content-Type",'application/json');
@@ -30,7 +35,7 @@ app.get('/textpro/fancyglow',(req,res) => {
     if(Object.keys(req.query).length === 0) {
         res.json({error : 'Example https://buyutapi.herokuapp.com/textpro/fancyglow?text=buyutapi'});
     }
-    if(url == ""){
+    if(text == ""){
         res.json({error : 'Fill text query'});
     }else{
         textFancyGlow(text)
