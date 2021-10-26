@@ -27,3 +27,5 @@ async function textFancyGlow(text0){
 			})
 	return url;
 }
+
+module.exports = textFancyGlow;
