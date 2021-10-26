@@ -3,7 +3,6 @@ const puppeteer = require("puppeteer");
 async function textFancyGlow(text0){
 	let url;
 	const browser = await puppeteer.launch({
-			executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
 			headless : false
 		});
 	console.log("meluncurkan browser")
