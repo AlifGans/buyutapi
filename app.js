@@ -1,6 +1,7 @@
 const express = require('express');
 
-const textPro = require("./textpro/textPro.js")
+const textPro = require("./textpro/textPro1val.js");
+const textPro2 = require("./textpro/textPro2val.js");
 const getInfo = require('./ytdl.js')
 const app = express();
 const port = process.env.PORT || 3030;
@@ -54,7 +55,7 @@ app.get('/textpro/pornhub',(req,res) => {
     if(text.length == 0){
         res.json({error : 'Example https://buyutapi.herokuapp.com/textpro/pornhub?text0=buyut&text1=api'});
     }else{
-        textPro(url,text)
+        textPro2(url,text)
         .then( url => res.json({url}))
     }
 })
@@ -70,7 +71,7 @@ app.get('/textpro/glitch',(req,res) => {
     if(text.length == 0){
         res.json({error : 'Example https://buyutapi.herokuapp.com/textpro/glitch?text0=buyut&text1=api'});
     }else{
-        textPro(url,text)
+        textPro2(url,text)
         .then( url => res.json({url}))
     }
 })
