@@ -16,7 +16,7 @@ async function textPro(url,textInput){
 				await textInput.forEach( async (value,i) => {	
 					await page.type(`#text-${i}`, value);
 					console.log(`typing #text-${i} value : ${value}`)
-					await new Promise(resolve => setTimeout(resolve,2000));
+					await new Promise(resolve => setTimeout(resolve,6000));
 				})
 				await page.click("#submit");
 				await new Promise(resolve => setTimeout(resolve,20000));
