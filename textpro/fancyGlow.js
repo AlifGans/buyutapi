@@ -6,7 +6,7 @@ async function textFancyGlow(text0){
     '--no-sandbox',
     '--disable-setuid-sandbox'
   ],
-			headless : false
+			headless : true
 		});
 	console.log("meluncurkan browser")
 	const page = await browser.newPage();
